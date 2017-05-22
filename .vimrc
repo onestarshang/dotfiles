@@ -26,14 +26,16 @@ NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'scrooloose/syntastic'
 NeoBundle 'davidhalter/jedi-vim'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'editorconfig-vim'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'nvie/vim-flake8'
+NeoBundle 'tpope/vim-pathogen'
+NeoBundle 'vim-syntastic/syntastic'
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 
 call neobundle#end()
 
@@ -84,8 +86,10 @@ let g:tagbar_left=1
 "syntastic设置
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_open=1
 let g:syntastic_auto_loc_list=0
+let g:syntastic_check_on_wq = 0
 
 "using brewed python in macvim
 if has("gui_macvim")
@@ -108,7 +112,7 @@ let g:EasyMotion_leader_key = 'f'
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 "let g:airline_theme = "dark"
-"let g:airline_theme = "murmur"
+let g:airline_theme = "murmur"
 
 "Emmet设置
 let g:user_emmet_install_global = 1
@@ -156,3 +160,13 @@ endfunction
 
 set tabpagemax=18
 set showtabline=2
+
+
+let g:autopep8_ignore="E501,W293"
+let g:autopep8_select="E501,W293"
+let g:autopep8_pep8_passes=100
+let g:autopep8_max_line_length=110
+let g:autopep8_aggressive=1
+let g:autopep8_indent_size=2
+let g:autopep8_disable_show_diff=1
+
