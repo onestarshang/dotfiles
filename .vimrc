@@ -36,6 +36,10 @@ NeoBundle 'tpope/vim-pathogen'
 NeoBundle 'vim-syntastic/syntastic'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'vim-airline/vim-airline-themes'
+NeoBundle 'mlaursen/vim-react-snippets'
+NeoBundle 'maxmellon/vim-jsx-pretty'
+NeoBundle 'morhetz/gruvbox'
+
 
 call neobundle#end()
 
@@ -45,7 +49,8 @@ execute pathogen#infect()
 set number
 set background="dark"
 let g:solarized_termcolors=256
-colorscheme solarized
+set bg=dark
+colorscheme gruvbox
 "进入粘贴模式，不自动缩进
 set pastetoggle=<F9>
 "设置backspace的行为
@@ -111,8 +116,8 @@ let g:EasyMotion_leader_key = 'f'
 "airline设置
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
-"let g:airline_theme = "dark"
-let g:airline_theme = "murmur"
+" let g:airline_theme = "gruvbox"
+
 
 "Emmet设置
 let g:user_emmet_install_global = 1
@@ -170,3 +175,10 @@ let g:autopep8_aggressive=1
 let g:autopep8_indent_size=2
 let g:autopep8_disable_show_diff=1
 
+
+let g:vim_jsx_pretty_template_tags=['html', 'raw', 'js', 'jsx']
+let g:vim_jsx_pretty_highlight_close_tag=1
+let g:vim_jsx_pretty_colorful_config=1
+
+let g:gruvbox_bold=1
+let g:gruvbox_italic=0
